@@ -18,3 +18,6 @@ curl -O -L https://github.com/actions/runner/releases/download/v${version}/actio
 
 # Extract the installer
 tar xzf ./actions-runner-${os}-${arch}-${version}.tar.gz
+
+arch -x86_64 ./config.sh ...
+arch -x86_64 ./run.sh
