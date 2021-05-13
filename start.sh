@@ -7,6 +7,8 @@
 
 cd actions-runner
 
-arch -x86_64 ./config.sh
+# Only needs to be called once
+#arch -x86_64 ./config.sh --url https://github.com/mas-cli/mas --token ******
+
 arch -x86_64 ./run.sh
 
