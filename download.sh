@@ -11,7 +11,11 @@ arch=x64
 echo "Downloading GitHub actions-runner for ${os} ${arch}"
 
 # Create a folder
-mkdir actions-runner && cd actions-runner || exit
+if ! test -d actions-runner; then
+    mkdir actions-runner || exit 1
+fi
+
+cd actions-runner || exit 2
 
 # Download the latest runner package
 curl -O -L https://github.com/actions/runner/releases/download/v${version}/actions-runner-${os}-${arch}-${version}.tar.gz
