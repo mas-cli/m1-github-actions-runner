@@ -2,9 +2,9 @@
 # download.sh
 # m1-github-actions-runner
 #
-# https://github.com/actions/runner/releases/tag/v2.278.0
+# https://github.com/actions/runner/releases
 
-version=2.278.0
+version=2.286.0
 os=osx
 arch=x64
 
@@ -18,4 +18,3 @@ curl -O -L https://github.com/actions/runner/releases/download/v${version}/actio
 
 # Extract the installer
 tar xzf ./actions-runner-${os}-${arch}-${version}.tar.gz
-
