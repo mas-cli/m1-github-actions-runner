@@ -18,6 +18,7 @@ token=******
 
 ./config.sh \
     --name "m1" \
+    --runnergroup "Default" \
     --labels "self-hosted,macOS,arm64" \
     --work "_work" \
     --url "${url}" \
