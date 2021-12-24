@@ -5,6 +5,7 @@
 .DS_Store
 .build/
 .classpath
+.envrc
 .gradle/
 .idea/
 .project
