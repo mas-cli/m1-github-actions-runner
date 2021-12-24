@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -e
 # download.sh
 # m1-github-actions-runner
 #
@@ -13,14 +13,14 @@ echo "Downloading GitHub actions-runner for ${os} ${arch}"
 
 # Create a folder
 if ! test -d actions-runner; then
-    mkdir actions-runner || exit 1
+    mkdir actions-runner
 fi
 
-cd actions-runner || exit 2
+cd actions-runner
 
 # Download the latest runner package
 curl -O -L https://github.com/actions/runner/releases/download/v${version}/actions-runner-${os}-${arch}-${version}.tar.gz
-echo "${sha}  actions-runner-${os}-${arch}-${version}.tar.gz" | shasum -a 256 -c || exit 3
+echo "${sha}  actions-runner-${os}-${arch}-${version}.tar.gz" | shasum -a 256 -c
 
 # Extract the installer
 tar xzf ./actions-runner-${os}-${arch}-${version}.tar.gz
